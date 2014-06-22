@@ -1,0 +1,21 @@
+<%= form_for @bar do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :drink %>
+    <%= f.text_field :drink %>
+  </p>
+  <p>
+    <%= f.submit 'Add drink' %>
+  </p>
+<% end %>
+
+<%= @bars.each do |bar| %>
+  <ul>
+    <li>
+      <%= bar.name %>, <%= bar.drink %>
+    </li>
+  </ul>
+<% end %>
