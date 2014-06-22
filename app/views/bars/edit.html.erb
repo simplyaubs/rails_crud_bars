@@ -8,14 +8,6 @@
     <%= f.text_field :drink %>
   </p>
   <p>
-    <%= f.submit 'Add drink' %>
+    <%= f.submit 'Update drink' %>
   </p>
-<% end %>
-
-<%= @bars.each do |bar| %>
-  <ul>
-    <li>
-      <%= link_to "#{bar.name}", bar_path(bar) %>, <%= bar.drink %>
-    </li>
-  </ul>
 <% end %>
