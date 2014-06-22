@@ -30,6 +30,12 @@ class BarsController < ApplicationController
     redirect_to bars_path
   end
 
+  def destroy
+    @bar = Bar.find(params[:id]).delete
+
+    redirect_to bars_path
+  end
+
   private
   def bar_params
     params.require(:bar).permit(:name, :drink)
